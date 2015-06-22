@@ -33,7 +33,7 @@ ENV HAP_PKG_VRS 1.5.3-1~ubuntu14.04.1
 RUN \
     sed -i 's/^# \(.*-backports\s\)/\1/g' /etc/apt/sources.list && \
     apt-get update && \
-    apt-get install -y python-software-properties python haproxy=1.5.3-1~ubuntu14.04.1 && \
+    apt-get install -y haproxy=1.5.3-1~ubuntu14.04.1 && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
