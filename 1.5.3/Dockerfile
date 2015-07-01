@@ -43,8 +43,8 @@ RUN \
     dpkg-reconfigure -f noninteractive tzdata
 
 # Expose ports to other containers
-# Expose 80: Stats page for HAProxy
-EXPOSE 80
+# Expose 8080: Stats page for HAProxy
+EXPOSE 8080
 
 # Define the default command as entrypoint
 ENTRYPOINT ["/usr/sbin/haproxy", "-f", "/etc/haproxy/haproxy.cfg"]
